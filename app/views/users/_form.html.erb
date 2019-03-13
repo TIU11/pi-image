@@ -16,6 +16,10 @@
     <%= form.text_field :username %>
   </div>
 
+  <div class="field">
+    <%= form.file_field :images, multiple: true, direct_upload: true %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

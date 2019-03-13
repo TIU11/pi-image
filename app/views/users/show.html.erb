@@ -5,5 +5,13 @@
   <%= @user.username %>
 </p>
 
+<ul>
+  <% @user.images.each do |image| %>
+    <li>
+      <%= image_tag image.variant(resize: "100x100") %>
+    </li>
+  <% end %>
+</ul>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
