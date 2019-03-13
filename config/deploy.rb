@@ -43,7 +43,7 @@ set :linked_dirs, %w[log tmp/pids tmp/cache]
 
 namespace :deploy do
 
-  before :restart, :update_group
+  # before :restart, :update_group
 
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do

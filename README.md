@@ -43,6 +43,8 @@ git commit -m "Add users and storage."
 
 cap install STAGES=demo,production
 rvm --ruby-version --create use 2.5.3@pi-image
+git commit -m "Configure capistrano for deploy."
+cap demo deploy
 ```
 
 ## Extra stuff
