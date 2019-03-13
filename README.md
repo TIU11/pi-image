@@ -22,3 +22,26 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# Setup
+
+```bash
+rails new pi-image --database=postgresql --skip-turbolinks  --no-scaffold-stylesheet
+cd pi-image
+git init
+git add .
+git commit -m "Initialized with 'rails new pi-image --database=postgresql --skip-turbolinks  --no-scaffold-stylesheet'"
+
+rails active_storage:install
+rails g scaffold user username:string
+
+rails db:create
+rails db:migrate
+
+git commit -m "Add users and storage."
+```
+
+## Extra stuff
+```bash
+# Apply our template, add some color.
+```
