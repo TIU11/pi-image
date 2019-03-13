@@ -5,6 +5,12 @@
   <%= @user.username %>
 </p>
 
+<p>
+  <strong>Avatar:</strong>
+  <%= image_tag @user.avatar.variant(resize: "200x200") if @user.avatar.attached? %>
+</p>
+
+<strong>Images:</strong>
 <ul>
   <% @user.images.each do |image| %>
     <li>

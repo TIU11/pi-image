@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  skip_forgery_protection
+  wrap_parameters include: [:username, :images, :avatar], format: [:json, :multipart_form]
 
   # GET /users
   # GET /users.json
@@ -69,6 +71,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:username, images: [])
+      params.require(:user).permit(:username, :avatar, images: [])
     end
 end
