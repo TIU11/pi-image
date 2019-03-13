@@ -40,6 +40,9 @@ rails db:create
 rails db:migrate
 
 git commit -m "Add users and storage."
+
+cap install STAGES=demo,production
+rvm --ruby-version --create use 2.5.3@pi-image
 ```
 
 ## Extra stuff
