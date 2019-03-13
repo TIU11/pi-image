@@ -34,6 +34,7 @@ git commit -m "Initialized with 'rails new pi-image --database=postgresql --skip
 
 rails active_storage:install
 rails g scaffold user username:string
+rails g scaffold post content:text
 
 rails db:create
 rails db:migrate
